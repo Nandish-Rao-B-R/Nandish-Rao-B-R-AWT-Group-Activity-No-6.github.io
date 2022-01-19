@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hospital</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box;}
+
+body { 
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+
+}
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active {
+  background-color: #717181;
+}
+.slideshow-container{outline-color: solid;
+width: auto;
+height: auto;}
+}
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 5.5s;
+  animation-name: fade;
+  animation-duration: 5.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+.img{
+    min-height:100%;
+    min-width:100%;
+    height:auto;
+    width:auto;
+    position:absolute;
+    top:-100%; bottom:-100%;
+    left:-100%; right:-100%;
+    margin:auto;
+}
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+.footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+}
+
+</style>
+
+</head>
+<body>
+<div class="navbar">
+  <a href="#default" class="logo">Hospital</a>                                                             
+  <div class="navbar-right">
+    <a class="active" href="index.html">Home</a>
+    <a href="contact.html">Contact</a>
+    <a href="about.html">About</a>
+    
+    
+</div>
+</div>
+<p><img src="nnn.jpg" style="width:1510px ; height: 700px;"></p>
+<div class="slideshow-container" align="center">
+<div class="mySlides fade">
+  <img src="1.png" style="width:400%;max-width:1000px">
+</div>
+
+<div class="mySlides fade">
+  <img src="2.png" style="width:400%;max-width:1000px">
+</div>
+
+<div class="mySlides fade">
+  <img src="3.png" style="width:400%;max-width:1000px">
+</div>
+
+<div class="mySlides fade">
+  <img src="4.jpg" style="width:400%;max-width:1000px">
+</div>
+
+<div class="mySlides fade">
+  <img src="5.jpg" style="width:400%;max-width:1000px">
+</div>
+
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+   <span class="dot"></span> 
+    <span class="dot"></span> 
+</div>
+
+
+    <script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 3000); // Change image every 2 seconds
+}
+</script>
+  </div>
+
+<div class="footer">
+  <p>Footer</p>
+</div> 
+</body>
+</html>
